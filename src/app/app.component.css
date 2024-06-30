@@ -1,0 +1,19 @@
+.navbar {
+    /* background-color: #fff;*/
+  }
+
+  .nav-item {
+    font-size: 17px;
+    font-weight: 600;
+  }
+  
+  .nav-link-active {
+    
+    font-weight: bold;
+    
+  }
+  
+  section {
+    height: 100%;
+    overflow: hidden;
+  }

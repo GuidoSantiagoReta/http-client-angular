@@ -1,1 +1,24 @@
-<p>products works!</p>
+<div class="contenedor-productos">
+    <h2 class="text-center mt-5">Productos</h2>
+    <div class="container d-flex justify-content-center align-items-center mt-5">
+      <table class="table table-secondary table-striped table-bordered mt-5">
+        <thead>
+          <tr>
+            <th class="product-price-detail" scope="col">Producto</th>
+            <th class="product-price-detail" scope="col">Precio</th>
+            <th class="product-price-detail text-center" scope="col">Detalle</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let product of productList">
+            <td>{{product.name}}</td>
+            <td [ngClass]="{'color-discount': product.price > 10000}">{{product.price | currency}}</td>
+            <td class="detail-col text-center d-flex justify-content-center align-items-center">
+              <button type="button" class="btn btn-secondary m-1" [routerLink]="['/products',product.id]">Detalle</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+</div>
+

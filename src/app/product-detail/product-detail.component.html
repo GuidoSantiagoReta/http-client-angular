@@ -1,1 +1,38 @@
-<p>product-detail works!</p>
+<div class="detail-section">
+    <ng-container *ngIf="!loading"> <!--cuando se pone en false muestra la información-->
+
+        <h2 class="text-center mt-5">Detalle</h2>
+        <div class="row justify-content-center align-items-center h-100">
+            <div class="col-12 col-md-8 offset-md-2 text-center mt-5">
+                <div class="row g-3">
+                    <div class="col-12 mb-3">
+                        <p class="fw-bold">Producto:</p>
+                        <p>{{product?.name}}</p>
+                    </div>
+                    <div class="col-12 mb-3">
+                        <p class="fw-bold">Precio:</p>
+                        <p [ngStyle]="{'color' : color}">{{product?.price | currency}}</p>
+                    </div>
+                    <div class="col-12">
+                        <p class="fw-bold">Descripción:</p>
+                        <p *ngIf="product?.description">{{product?.description}}</p>
+                    </div>
+                </div>
+                <img [src]="product?.image" class="img-fluid rounded mt-3 image-description" alt="Product Image">
+            </div>
+        </div>
+        <div class="d-flex justify-content-center align-items-center mt-3 mb-5">
+            <button class="btn btn-secondary text-center" [routerLink]="['/products']">Volver</button>
+        </div>
+
+    </ng-container>
+
+    <ng-container *ngIf="loading">
+        <div class="row justify-content-center align-items-center h-50">
+            <div class="col-12 text-center mt-5">
+                <i>Cargando...</i>
+            </div>
+        </div>
+    </ng-container>
+      
+</div>
