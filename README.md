@@ -7,6 +7,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 - HTTP Client
 - Bootstrap 5 
 - https://fakestoreapi.com
+- Postman
+- Quicktype ( utilizada para crear la interface de la API a la cual queremos obtener mediante postman).
 
 ## Instalación de bootstrap ultima versión
 - npm i bootstrap@5.3.3
