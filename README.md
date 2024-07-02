@@ -1,4 +1,4 @@
-# Consumo de APIs con Angular + HTTP Client
+# Consumo de API de Productos con Angular + HTTP Client + RxJS y Observables
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.2.
 
