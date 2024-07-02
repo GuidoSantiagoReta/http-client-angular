@@ -5,14 +5,14 @@ import { ProductsComponent } from './products/products.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 
 const routes: Routes = [
-  {path:'', component: HomeComponent},
-  {path:'products', component: ProductsComponent},
+  { path: '', component: HomeComponent },
+  { path: 'products', component: ProductsComponent },
   { path: 'products/:productId', component: ProductDetailComponent },
   { path: '**', redirectTo: '/home', pathMatch: 'full' },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

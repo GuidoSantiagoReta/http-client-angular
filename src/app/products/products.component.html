@@ -1,24 +1,23 @@
 <div class="contenedor-productos">
   <h2 class="text-center mt-5">Products</h2>
-    <div class="container d-flex justify-content-center align-items-center ">
-      <table class="table table-dark table-borderless table-bordered table-hover mt-5 mt-5">
-        <thead>
-          <tr>
-            <th class="product-price-detail" scope="col">Product</th>
-            <th class="product-price-detail" scope="col">Price</th>
-            <th class="product-price-detail text-center" scope="col">Detail</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let product of productList">
-            <td>{{product.title}}</td>
-            <td [ngClass]="{'color-discount': product.price > 300}">{{product.price | currency}}</td>
-            <td class="detail-col text-center d-flex justify-content-center align-items-center">
-              <button type="button" class="btn btn-secondary m-1" [routerLink]="['/products',product.id]">Detail</button>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+  <div class="container d-flex justify-content-center align-items-center ">
+    <table class="table table-dark table-borderless table-bordered table-striped table-hover mt-5 mt-5">
+      <thead>
+        <tr>
+          <th class="product-price-detail" scope="col">Product</th>
+          <th class="product-price-detail" scope="col">Price</th>
+          <th class="product-price-detail text-center" scope="col">Detail</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of productList">
+          <td>{{product.title}}</td>
+          <td [ngClass]="{'color-discount': product.price > 300}">{{product.price | currency}}</td>
+          <td class="detail-col text-center d-flex justify-content-center align-items-center">
+            <button type="button" class="btn btn-secondary m-1" [routerLink]="['/products',product.id]">Detail</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </div>
-
