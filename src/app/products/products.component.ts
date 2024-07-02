@@ -1,12 +1,22 @@
-import { Component } from '@angular/core';
-import { productsList } from './products.mock';
+import { Component, OnInit } from '@angular/core';
+import { InProduct } from '../models/product.model';
+import { ApiService } from '../services/api.service';
 
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',
-  styleUrl: './products.component.css'
+  styleUrls: ['./products.component.css']
 })
-export class ProductsComponent {
-  productList = productsList;
-  showIdColumn: boolean = true;
+export class ProductsComponent implements OnInit {
+  
+  productList: InProduct[] = [];
+ 
+  constructor(private _apiService: ApiService){}
+
+  ngOnInit(): void {
+    this._apiService.getAllProducts().subscribe((data: InProduct[]) =>{
+      //console.log(data)
+      this.productList = data;
+    })
+  }
 }

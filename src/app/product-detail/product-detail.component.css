@@ -3,3 +3,24 @@
     padding: auto;
 
 }
+
+
+.card{
+    background-color: rgb(255, 255, 255);
+}
+
+
+
+.card-title{
+    font-weight: bold;
+}
+
+
+.card-text{
+ font-style: italic;
+ color: rgb(121, 121, 121);
+}
+
+.custom-button{
+    width: 25rem ;
+}
