@@ -5,3 +5,24 @@
 .color-discount{
  color: rgb(42, 116, 0);
 }
+
+
+@media screen and (max-width: 575px) {
+    .table {
+      font-size: 13px; 
+    
+    }
+  }
+
+  
+  
+@media screen and (max-width: 435px) {
+    .table {
+        font-size: 12px; 
+      
+      } 
+      .button-responsive{
+       font-size: 12px;
+      } 
+     
+}

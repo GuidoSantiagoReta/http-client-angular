@@ -14,7 +14,7 @@
           <td>{{product.title}}</td>
           <td [ngClass]="{'color-discount': product.price > 300}">{{product.price | currency}}</td>
           <td class="detail-col text-center d-flex justify-content-center align-items-center">
-            <button type="button" class="btn btn-secondary m-1" [routerLink]="['/products',product.id]">Detail</button>
+            <button type="button" class="btn btn-secondary m-1 button-responsive" [routerLink]="['/products',product.id]">Detail</button>
           </td>
         </tr>
       </tbody>

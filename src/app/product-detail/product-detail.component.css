@@ -5,6 +5,7 @@
 
 .card {
     background-color: rgb(255, 255, 255);
+    width: 25rem;
 }
 
 .card-title {
@@ -18,4 +19,14 @@
 
 .custom-button {
     width: 25rem;
+}
+
+
+@media screen and (max-width: 435px) {
+    .card{
+        max-width: 15rem;
+    } 
+    .custom-button {
+        width: 15rem;
+    }
 }
